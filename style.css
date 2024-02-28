@@ -7,9 +7,6 @@
     scroll-behavior: smooth;
 }
 
-h1{
-    color: aquamarine;
-}
 .navbar{
     background: #809bce;
     height: 80px;
@@ -76,6 +73,11 @@ h1{
 }
 
 .circle {
+    
+    padding-left: 10%;
+    color: #809bce;
     justify-content: center;
-    align-items: center;
+    
+
 }
+
