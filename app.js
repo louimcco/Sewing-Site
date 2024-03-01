@@ -31,7 +31,7 @@ function setRuleValue(selector, prop, value) {
         j = 0;
   
         // Choose .cssRules or .rules, whichever is supported
-        while (rule = sheet.cssRules[j]) {
+        while (rule = (sheet.cssRules[j] || sheet.rules[j])) {
           j++;
   
           if (rule.selectorText.toLowerCase() == selector) {
