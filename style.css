@@ -81,3 +81,10 @@
 
 }
 
+.inches {
+    display: inline;
+}
+  
+.centimeters {
+    display: none;
+}
