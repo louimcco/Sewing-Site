@@ -130,9 +130,9 @@
     </span>
 
     <span class="centimeters">
-        <form id="radiusForm" onsubmit="return calcRadius()">
-            <label for="waist">Waist Measurement:</label>
-            <input type="number" id="waist">
+        <form id="radiusForm" onsubmit="return calcRadiusCm()">
+            <label for="waistCm">Waist Measurement:</label>
+            <input type="number" id="waistCm">
             <!-- <select id="waist">
               <option value="24">24</option>
               <option value="25">25</option>
@@ -154,8 +154,8 @@
             </select> -->
             <br></br>
     
-            <label for="length">Length Measurement:</label>
-            <input type="number" id="length">
+            <label for="lengthCm">Length Measurement:</label>
+            <input type="number" id="lengthCm">
             <!-- <select id="length">
               <option value="20">20</option>
               <option value="21">21</option>
@@ -191,22 +191,22 @@
             </select>
             <br></br>
     
-            <label for="seam">Seam Allowance:</label>
-            <select id="seam">
+            <label for="seamCm">Seam Allowance:</label>
+            <select id="seamCm">
                 <option value="0.25">0.25</option>
                 <option value="0.5">0.5</option>
                 <option value="0.75">0.75</option>
             </select>
             <br></br>
     
-            <label for="hem">Hemline:</label>
-            <select id="hem">
+            <label for="hemCm">Hemline:</label>
+            <select id="hemCm">
               <option value="0.25">0.25</option>
               <option value="0.5">0.5</option>
               <option value="0.75">0.75</option>
             </select>
             <br></br>
-            <button onclick="return calcRadius()">Submit</button>
+            <button onclick="return calcRadiusCm()">Submit</button>
         </form>
         </span>
 

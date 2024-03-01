@@ -16,6 +16,23 @@
     document.getElementById("circleOutput").textContent = radius;
     return false;
 }
+function calcRadiusCm() {
+
+    let waist = document.getElementById("waistCm").value;
+    var length = document.getElementById("lengthCm").value;
+    let seam = document.getElementById("seamCm").value;
+    let hemline = document.getElementById("hemCm").value;
+    let wradius;
+    let radius;
+    // Calculate radius
+    wradius = (waist / 3.1415962) / 2
+    radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
+    radius = radius.toFixed(2)
+
+    console.log(radius);
+    document.getElementById("circleOutput").textContent = radius;
+    return false;
+}
 
 function setRuleValue(selector, prop, value) {
     selector = selector.toLowerCase();
