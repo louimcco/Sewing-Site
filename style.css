@@ -86,3 +86,20 @@
 .centimeters {
     display: none;
 }
+
+.row {
+    padding-top: 5%;
+    margin: auto;
+    width: 60%;
+  }
+
+.heading {
+    color: #809bce;
+    font-size: 2.4rem;
+}
+
+.main {
+    color: #809bce;
+    font-size: 1.2rem;
+    line-height: 150%;
+}
