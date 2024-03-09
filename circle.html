@@ -31,6 +31,7 @@
 </nav>   
 
 
+
 <!-- Circle Skirt Calculator -->
 
 <br></br>
@@ -38,11 +39,22 @@
 
 <div class="circle" id="circle" >
 
-    <button onclick="showInches()">Show Inches</button>
+  <label class="toggleSwitch" onchange="swapUnit()">
+    <input type="checkbox" />
+    <span>
+        <span>in</span>
+        <span>cm</span>
+        Unit:
+    </span>
+    <a></a>
+</label>
+
+<!-- 
+    <button onclick="">Show Inches</button>
     <button onclick="showCentimeters()">Show Centimeters</button>
+    <br></br> -->
+
     <br></br>
-
-
     <h1>Circle skirt Calculator</h1>
     <br></br>
     <h2>Enter your values below:</h2>
@@ -52,62 +64,12 @@
     <form id="radiusForm" onsubmit="return calcRadius()">
         <label for="waist">Waist Measurement:</label>
         <input type="number" id="waist">
-        <!-- <select id="waist">
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-          <option value="32">32</option>
-          <option value="33">33</option>
-          <option value="34">34</option>
-          <option value="35">35</option>
-          <option value="36">36</option>
-          <option value="37">37</option>
-          <option value="38">38</option>
-          <option value="39">39</option>
-          <option value="40">40</option>
-        </select> -->
         <br></br>
 
         <label for="length">Length Measurement:</label>
         <input type="number" id="length">
-        <!-- <select id="length">
-          <option value="20">20"</option>
-          <option value="21">21"</option>
-          <option value="22">22"</option>
-          <option value="23">23"</option>
-          <option value="24">24"</option>
-          <option value="25">25"</option>
-          <option value="26">26"</option>
-          <option value="27">27"</option>
-          <option value="28">28"</option>
-          <option value="29">29"</option>
-          <option value="30">30"</option>
-          <option value="31">31"</option>
-          <option value="32">32"</option>
-          <option value="33">33"</option>
-          <option value="34">34"</option>
-          <option value="35">35"</option>
-          <option value="36">36"</option>
-          <option value="37">37"</option>
-          <option value="38">38"</option>
-          <option value="39">39"</option>
-          <option value="40">40"</option>
-          <option value="41">41"</option>
-          <option value="42">42"</option>
-          <option value="43">43"</option>
-          <option value="44">44"</option>
-          <option value="45">45"</option>
-          <option value="46">46"</option>
-          <option value="47">47"</option>
-          <option value="48">48"</option>
-          <option value="49">49"</option>
-          <option value="50">50"</option>
-        </select> -->
+       
+ 
         <br></br>
 
         <label for="seam">Seam Allowance:</label>
@@ -133,61 +95,12 @@
         <form id="radiusForm" onsubmit="return calcRadiusCm()">
             <label for="waistCm">Waist Measurement:</label>
             <input type="number" id="waistCm">
-            <!-- <select id="waist">
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-            </select> -->
+
             <br></br>
     
             <label for="lengthCm">Length Measurement:</label>
             <input type="number" id="lengthCm">
-            <!-- <select id="length">
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26"</option>
-              <option value="27">27"</option>
-              <option value="28">28"</option>
-              <option value="29">29"</option>
-              <option value="30">30"</option>
-              <option value="31">31"</option>
-              <option value="32">32"</option>
-              <option value="33">33"</option>
-              <option value="34">34"</option>
-              <option value="35">35"</option>
-              <option value="36">36"</option>
-              <option value="37">37"</option>
-              <option value="38">38"</option>
-              <option value="39">39"</option>
-              <option value="40">40"</option>
-              <option value="41">41"</option>
-              <option value="42">42"</option>
-              <option value="43">43"</option>
-              <option value="44">44"</option>
-              <option value="45">45"</option>
-              <option value="46">46"</option>
-              <option value="47">47"</option>
-              <option value="48">48"</option>
-              <option value="49">49"</option>
-              <option value="50">50"</option> -->
+
             </select>
             <br></br>
     
@@ -214,5 +127,12 @@
     <h3 id="circleOutput">0</h3>
 
 </div>
+
+<div class="circleMain">
+  <p> Some words.. </p>
+  put calc in box
+</div>
+
+
 </body>
 </html>

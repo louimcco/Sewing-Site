@@ -64,18 +64,30 @@ function setRuleValue(selector, prop, value) {
     return false;
   }
   
-  // Turn metric on, imperial off
+  let flag = true;
+
+  function swapUnit() {
+    flag = !flag;
+    if (flag) {
+      showInches();
+    } else {
+      showCentimeters();
+    }
+  }
+
+  
   function showInches() {
     setRuleValue('.inches','display', '');
     setRuleValue('.centimeters', 'display', 'none' );
   }
   
-  // Turn imperial on, metric off
+
   function showCentimeters() {
     setRuleValue('.inches','display', 'none');
     setRuleValue('.centimeters', 'display', '' );
   }
   
+
 
 //Convert the decimal to a fraction of an inch (Use Span)
 //offer a cm version
