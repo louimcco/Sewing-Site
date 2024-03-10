@@ -2,36 +2,51 @@
  function calcRadius() {
 
     let waist = document.getElementById("waist").value;
-    var length = document.getElementById("length").value;
+    let length = document.getElementById("length").value;
     let seam = document.getElementById("seam").value;
     let hemline = document.getElementById("hem").value;
     let wradius;
     let radius;
+
+    if (waist == "" || length == "" ) {
+      document.getElementById("circleOutput").textContent = "Please fill all fields";
+    return false;
+    } else {
+
+    
     // Calculate radius
     wradius = (waist / 3.1415962) / 2
     radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
     radius = radius.toFixed(2)
 
     console.log(radius);
-    document.getElementById("circleOutput").textContent = radius;
+    document.getElementById("circleOutput").textContent = "Circle of Radius: " + radius + "\"";
     return false;
+    }
 }
 function calcRadiusCm() {
 
     let waist = document.getElementById("waistCm").value;
-    var length = document.getElementById("lengthCm").value;
+    let length = document.getElementById("lengthCm").value;
     let seam = document.getElementById("seamCm").value;
     let hemline = document.getElementById("hemCm").value;
     let wradius;
     let radius;
+
+    if (waist == "" || length == "" ) {
+      document.getElementById("circleOutput").textContent = "Please fill all fields";
+    return false;
+    }
+    else {
     // Calculate radius
     wradius = (waist / 3.1415962) / 2
     radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
     radius = radius.toFixed(2)
 
     console.log(radius);
-    document.getElementById("circleOutput").textContent = radius;
+    document.getElementById("circleOutput").textContent = "Circle of Radius: " + radius + "cm";
     return false;
+    }
 }
 
 function setRuleValue(selector, prop, value) {
