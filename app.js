@@ -10,6 +10,7 @@
 
     if (waist == "" || length == "" ) {
       document.getElementById("circleOutput").textContent = "Please fill all fields";
+      document.getElementById("radius").textContent = "";
     return false;
     } else {
 
@@ -17,10 +18,13 @@
     // Calculate radius
     wradius = (waist / 3.1415962) / 2
     radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
-    radius = radius.toFixed(2)
+    radius = radius.toFixed(1)
+    wradius = wradius.toFixed(1)
 
     console.log(radius);
-    document.getElementById("circleOutput").textContent = "Circle of Radius: " + radius + "\"";
+    document.getElementById("circleOutput").textContent = "Waist Radius: " + wradius + "\"";
+    document.getElementById("radius").textContent = "Circle of Radius: " + radius + "\"";
+
     return false;
     }
 }
@@ -35,6 +39,7 @@ function calcRadiusCm() {
 
     if (waist == "" || length == "" ) {
       document.getElementById("circleOutput").textContent = "Please fill all fields";
+      document.getElementById("radius").textContent = "";
     return false;
     }
     else {
@@ -42,9 +47,11 @@ function calcRadiusCm() {
     wradius = (waist / 3.1415962) / 2
     radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
     radius = radius.toFixed(2)
+    
 
     console.log(radius);
-    document.getElementById("circleOutput").textContent = "Circle of Radius: " + radius + "cm";
+    document.getElementById("radius").textContent = "Circle of Radius: " + radius + "cm";
+    document.getElementById("circleOutput").textContent = "Waist Radius: " + wradius + "cm";
     return false;
     }
 }
@@ -85,8 +92,12 @@ function setRuleValue(selector, prop, value) {
     flag = !flag;
     if (flag) {
       showInches();
+      document.getElementById("radius").textContent = "";
+      document.getElementById("circleOutput").textContent = "";
     } else {
       showCentimeters();
+      document.getElementById("radius").textContent = "";
+      document.getElementById("circleOutput").textContent = "";
     }
   }
 
