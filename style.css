@@ -15,6 +15,56 @@ a{
   color:  #C3B1E1;
 }
 
+#hamburger_icon{ 
+  margin: auto 0;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger_icon div{
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  header nav{ 
+    display: none;
+  }
+  #hamburger_icon {
+    display: block;
+  }
+}
+
+.open .bar1, .bar2, .bar3 {
+  opacity: 0;
+}
+
+.open .mobile-menu {
+  display: flex 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu{
+  display: none;
+  position: absolute;
+  top: 50px;
+  left:0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 .navbar{
     background: #809bce;
     height: 80px;
@@ -82,8 +132,8 @@ a{
 
 .circle {
     
-    float: right;
-    margin-right: 20%;
+    float: left;
+    margin-left: 15vw;
     color: #fff;
     justify-content: center;
     border: 40px solid #809bce;
@@ -98,13 +148,15 @@ a{
     display: none;
 }
 
-.row {
+/* .row {
     padding-top: 5%;
     margin: auto;
     width: 40%;
-  }
+  } */
 
 .heading {
+    margin-top: 15vh;
+    margin-left: 20vw;
     color: #809bce;
     font-size: 2.4rem;
 }
@@ -113,8 +165,9 @@ a{
     color: #809bce;
     font-size: 1.2rem;
     line-height: 150%;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
-
 
 /* toggle */
 .toggleSwitch span span {
@@ -279,24 +332,24 @@ a{
     }
   }
   
-
-
 .circleMain {
     color: #809bce;
     font-size: 1.2rem;
     line-height: 150%;
-    float: left;
-    padding-left: 20%;
+    margin-left: 42vw;
+    margin-right: 15vw;
+    /* float: left; */
     padding-top: 45px;
-    width: 55%;
+
 }
 
 .circleMain2 {
   color: #809bce;
     font-size: 1.2rem;
     line-height: 150%;
-    float: right;
-    padding-right: 20%;
+    float: left;
+    margin-left: 15vw;
+    margin-right: 15vw;
     padding-top: 45px;
-    width: 45%;
+
 }

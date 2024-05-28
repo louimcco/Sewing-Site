@@ -114,7 +114,9 @@ function setRuleValue(selector, prop, value) {
     setRuleValue('.centimeters', 'display', '' );
   }
   
-
+function ToggleMobileMenu(menu) {
+  menu.classList.toggle('open');
+  
+}
 
 //Convert the decimal to a fraction of an inch (Use Span)
-//offer a cm version

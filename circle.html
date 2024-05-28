@@ -37,118 +37,133 @@
 <br></br>
 <br></br>
 
-<div class="circle" id="circle" >
+<div class="row">
+    
 
-  <label class="toggleSwitch" onchange="swapUnit()">
-    <input type="checkbox" />
-    <span>
-        <span>in</span>
-        <span>cm</span>
-        Unit:
-    </span>
-    <a></a>
-</label>
+
+    <div class="circle" id="circle" >
+
+        <label class="toggleSwitch" onchange="swapUnit()">
+            <input type="checkbox" />
+            <span>
+                <span>in</span>
+                <span>cm</span>
+                Unit:
+            </span>
+            <a></a>
+        </label>
 
 <!-- 
     <button onclick="">Show Inches</button>
     <button onclick="showCentimeters()">Show Centimeters</button>
     <br></br> -->
 
-    <br></br>
-    <h1>Circle skirt Calculator</h1>
-    <br></br>
-    <h2>Enter your values below:</h2>
-    <br><br>
-
-    <span class="inches">
-    <form id="radiusForm" onsubmit="return calcRadius()">
-        <label for="waist">Waist Measurement:</label>
-        <input type="number" id="waist">
         <br></br>
-
-        <label for="length">Length Measurement:</label>
-        <input type="number" id="length">
-       
- 
+        <h1>Circle skirt Calculator</h1>
         <br></br>
+        <h2>Enter your values below:</h2>
+        <br><br>
 
-        <label for="seam">Seam Allowance:</label>
-        <select id="seam">
-          <option value="0.25">1/4</option>
-          <option value="0.5">1/2</option>
-          <option value="0.75">3/4</option>
-        </select>
-        <br></br>
-
-        <label for="hem">Hemline:</label>
-        <select id="hem">
-          <option value="0.25">1/4</option>
-          <option value="0.5">1/2</option>
-          <option value="0.75">3/4</option>
-        </select>
-        <br></br>
-        <button onclick="return calcRadius()">Submit</button>
-    </form>
-    </span>
-
-    <span class="centimeters">
-        <form id="radiusForm" onsubmit="return calcRadiusCm()">
-            <label for="waistCm">Waist Measurement:</label>
-            <input type="number" id="waistCm">
-
+        <span class="inches">
+        <form id="radiusForm" onsubmit="return calcRadius()">
+            <label for="waist">Waist Measurement:</label>
+            <input type="number" id="waist">
             <br></br>
-    
-            <label for="lengthCm">Length Measurement:</label>
-            <input type="number" id="lengthCm">
 
+            <label for="length">Length Measurement:</label>
+            <input type="number" id="length">
+        
+    
+            <br></br>
+
+            <label for="seam">Seam Allowance:</label>
+            <select id="seam">
+            <option value="0.25">1/4</option>
+            <option value="0.5">1/2</option>
+            <option value="0.75">3/4</option>
             </select>
             <br></br>
-    
-            <label for="seamCm">Seam Allowance:</label>
-            <select id="seamCm">
-                <option value="0.25">0.25</option>
-                <option value="0.5">0.5</option>
-                <option value="0.75">0.75</option>
+
+            <label for="hem">Hemline:</label>
+            <select id="hem">
+            <option value="0.25">1/4</option>
+            <option value="0.5">1/2</option>
+            <option value="0.75">3/4</option>
             </select>
             <br></br>
-    
-            <label for="hemCm">Hemline:</label>
-            <select id="hemCm">
-              <option value="0.25">0.25</option>
-              <option value="0.5">0.5</option>
-              <option value="0.75">0.75</option>
-            </select>
-            <br></br>
-            <button onclick="return calcRadiusCm()">Submit</button>
+            <button onclick="return calcRadius()">Submit</button>
         </form>
         </span>
 
-    <br></br>
-    <h3 id="circleOutput"></h3>
-    <h3 id="radius"></h3>
+        <span class="centimeters">
+            <form id="radiusForm" onsubmit="return calcRadiusCm()">
+                <label for="waistCm">Waist Measurement:</label>
+                <input type="number" id="waistCm">
+
+                <br></br>
+        
+                <label for="lengthCm">Length Measurement:</label>
+                <input type="number" id="lengthCm">
+
+                </select>
+                <br></br>
+        
+                <label for="seamCm">Seam Allowance:</label>
+                <select id="seamCm">
+                    <option value="0.25">0.25</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.75">0.75</option>
+                </select>
+                <br></br>
+        
+                <label for="hemCm">Hemline:</label>
+                <select id="hemCm">
+                <option value="0.25">0.25</option>
+                <option value="0.5">0.5</option>
+                <option value="0.75">0.75</option>
+                </select>
+                <br></br>
+                <button onclick="return calcRadiusCm()">Submit</button>
+            </form>
+            </span>
+
+        <br></br>
+        <h3 id="circleOutput"></h3>
+        <h3 id="radius"></h3>
 
 
 </div>
+
 
 <div class="circleMain">
     <h2>What is a Circle Skirt? </h2>
     <br></br>
-  <p> A full circle skirt is a skirt that, when laid flat, forms a circle. </p>
-  <p> This kind of skirt is great for creating lots of movement and volume. Perfect for twirling! </p>
-  <p> Entering your measurements into the calculator will produce a "waist radius", 
+<p> A full circle skirt is a skirt that, when laid flat, forms a circle. </p>
+<p> This kind of skirt is great for creating lots of movement and volume. Perfect for twirling! </p>
+<p> Entering your measurements into the calculator will produce a "waist radius", 
     as depicted in the diagram, and a "circle radius" which is the waist radius plus the skirt length.
-  </p>
-  <p> I prefer to construct my piece in quarters, though many people will choose sixths or eigths.
-     In this case, alter the central angle of your segement to match. For example, an angle of 60° should be
-     used if the skirt is to be constructed in six pieces. 
- </p>
- <img src="circle_skirt.png" alt="Circle Skirt" width="450" height="400">
- </div>
+</p>
+<p> I prefer to construct my piece in quarters, though many people will choose sixths or eigths.
+    In this case, alter the central angle of your segement to match. For example, an angle of 60° should be
+    used if the skirt is to be constructed in six pieces. 
+</p>
 
-<div class="circleMain2">
-<p> The following site offers a great guide as to circle skirts and their variations: <a href="https://anicka.design/2021/12/15/what-is-a-circle-skirt-and-what-are-its-variations/#how-to-calculate-a-full-circle-skirt" target="_blank">anicka.design</a></p>
 </div>
 
+</div>
+
+
+<div class="row">
+
+        <div class="circleMain2">
+        <p> The following site offers a great guide as to circle skirts and their variations: <a href="https://anicka.design/2021/12/15/what-is-a-circle-skirt-and-what-are-its-variations/#how-to-calculate-a-full-circle-skirt" target="_blank">anicka.design</a></p>
+    </div>
+    
+    <img src="circle_skirt.png" alt="Circle Skirt" width="450" height="400">
+
+</div>
+
+</div>
 
 </body>
 </html>

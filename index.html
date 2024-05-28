@@ -10,25 +10,43 @@
 </head>
 <body>
 
-<!-- navbar-->
-<nav class="navbar">
-    <div class="navbar__container">
-    <a href="./index.html" id="navbar__logo" >Sewing Maths</a> 
-    <div class="navbar__toggle" id="mobile-menu">
-    </div>
-    <ul class="navbar__menu">
-        <li class="navbar__item">
-            <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a> 
-        </li>
-        <li class="navbar__item">
-            <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a> 
-        </li>
-        <li class="navbar__item">
-        <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a> 
-        </li>
-    </ul>
-    </div>
-</nav>   
+    <header>
+    <!-- navbar-->
+        <nav class="navbar">
+            <div class="navbar__container">
+            <a href="./index.html" id="navbar__logo" >Sewing Maths</a> 
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a> 
+                </li>
+                <li class="navbar__item">
+                    <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a> 
+                </li>
+                <li class="navbar__item">
+                <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a> 
+                </li>
+            </ul>
+            </div>
+        </nav> 
+
+        <div id="Hamburger_icon" onclick="ToggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li class="navbar__item">
+                    <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a> 
+                </li>
+                <li class="navbar__item">
+                    <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a> 
+                </li>
+                <li class="navbar__item">
+                <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a> 
+                </li>
+            </ul>
+
+        </div>
+    </header>  
 
 <div class="row">
 
@@ -49,6 +67,8 @@
        <p> Happy sewing!</p>
     
        </div>
+
+       
 <!-- Extras:
 
 Cool animation: 8:25
