@@ -15,6 +15,9 @@ a{
   color:  #C3B1E1;
 }
 
+ul {
+  list-style-type: none;
+}
 #hamburger_icon{ 
   margin: auto 0;
   cursor: pointer;
@@ -24,39 +27,32 @@ a{
 #hamburger_icon div{
   width: 35px;
   height: 5px;
-  background-color: white;
-  margin: 6px 0;
+  background-color: #809bce;
+  margin: 5px 10px;
   transition: 0.4s;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  header nav{ 
-    display: none;
-  }
-  #hamburger_icon {
-    display: block;
-  }
-}
-
-.open .bar1, .bar2, .bar3 {
+ .open .bar1, .open .bar2, .open .bar3 {
   opacity: 0;
-}
+} 
 
-.open .mobile-menu {
-  display: flex 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
 
 .mobile-menu{
   display: none;
+  background-color: #809bce;
   position: absolute;
-  top: 50px;
   left:0;
-  height: calc(100vh - 50px);
+  height: 32vh;
   width: 100%;
+  
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.4s;
 }
 
 .row::after {
@@ -65,7 +61,7 @@ a{
   display: table;
 }
 
-.navbar{
+.navbar {
     background: #809bce;
     height: 80px;
     display: flex;
@@ -352,4 +348,14 @@ a{
     margin-right: 15vw;
     padding-top: 45px;
 
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .navbar {
+    display: none;
+  }
+  #hamburger_icon {
+    display: inline;
+  }
 }

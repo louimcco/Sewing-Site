@@ -86,37 +86,34 @@ function setRuleValue(selector, prop, value) {
     // If get here, didn't find rule so return false
     return false;
   }
-  
-  let flag = true;
 
-  function swapUnit() {
-    flag = !flag;
-    if (flag) {
-      showInches();
-      document.getElementById("radius").textContent = "";
-      document.getElementById("circleOutput").textContent = "";
-    } else {
-      showCentimeters();
-      document.getElementById("radius").textContent = "";
-      document.getElementById("circleOutput").textContent = "";
-    }
-  }
+let flag = true;
 
-  
-  function showInches() {
-    setRuleValue('.inches','display', '');
-    setRuleValue('.centimeters', 'display', 'none' );
+function swapUnit() {
+  flag = !flag;
+  if (flag) {
+    showInches();
+    document.getElementById("radius").textContent = "";
+    document.getElementById("circleOutput").textContent = "";
+  } else {
+    showCentimeters();
+    document.getElementById("radius").textContent = "";
+    document.getElementById("circleOutput").textContent = "";
   }
-  
+}
 
-  function showCentimeters() {
-    setRuleValue('.inches','display', 'none');
-    setRuleValue('.centimeters', 'display', '' );
-  }
-  
-function ToggleMobileMenu(menu) {
+function showInches() {
+  setRuleValue('.inches','display', '');
+  setRuleValue('.centimeters', 'display', 'none' );
+}
+
+function showCentimeters() {
+  setRuleValue('.inches','display', 'none');
+  setRuleValue('.centimeters', 'display', '' );
+}
+
+function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
-  
 }
 
 //Convert the decimal to a fraction of an inch (Use Span)
