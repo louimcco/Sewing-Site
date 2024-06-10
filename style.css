@@ -38,6 +38,7 @@ ul {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  z-index: 999;
 }
 
 .nav-icon4 span {
@@ -45,7 +46,7 @@ ul {
   position: absolute;
   height: 5px;
   width: 100%;
-  background: #809bce;
+  background: #fff;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -137,7 +138,7 @@ ul {
 }
 
 .navbar {
-    background: #faf9f6;
+    background: #809bce;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -160,12 +161,13 @@ ul {
 
 #navbar__logo{
     background-size: 100%;
-    color: #809bce;
+    color: #fff;
     display: flex;
     align-items: center;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    z-index: 999;
 }
 
 .navbar__menu{
