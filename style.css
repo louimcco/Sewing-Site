@@ -146,6 +146,8 @@ ul {
     font-size: 1.0rem;
     top: 0;
     border-bottom: 4px solid #809bce;
+    position: sticky;
+    z-index: 999;
 }
 
 .navbar__container{
