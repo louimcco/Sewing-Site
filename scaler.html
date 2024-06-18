@@ -11,7 +11,7 @@
 <body id="index">
 
 <!-- navbar-->
-<nav class="navbar">
+<nav class="navbar" id="scaler_navbar">
     <div class="navbar__container">
     <a href="./index.html" id="navbar__logo" >Sewing Maths</a> 
     <ul class="navbar__menu">
@@ -46,3 +46,47 @@
     </div>
 </nav>   
 
+<div class="row">
+<div class="scaler">
+
+    <br></br>
+        <h1>Pattern Scaler</h1>
+        <br></br>
+        <h2>Enter your values below:</h2>
+        <br><br>
+
+    <span class="inches">
+        <form id="scalerForm" onsubmit="return calcScale()">
+            <label for="ratio">Ratio: 1: </label>
+            <input type="number" id="ratio">
+            <br></br>
+
+            <label for="measurement">Measurement:</label>
+            <input type="number" id="measurement">
+        
+            <br></br>
+            <button onclick="return calcScale()">Submit</button>
+        </form>
+        </span>
+
+        <span class="centimeters">
+            <form id="scalerForm" onsubmit="return calcScaleCm()">
+                <label for="ratioCm">Ratio: </label>
+                <input type="number" id="ratioCm">
+                <p> :1</p>
+                <br></br>
+    
+                <label for="measurementCm">Measurement:</label>
+                <input type="number" id="measurementCm">
+            
+                <br></br>
+                <button onclick="return calcScaleCm()">Submit</button>
+            </form>
+            </span>
+            </span>
+
+        <br></br>
+        <h3 id="scaleOutput"></h3>
+
+</div>
+</div>

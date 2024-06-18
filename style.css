@@ -138,16 +138,30 @@ ul {
 }
 
 .navbar {
-    background: #809bce;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.0rem;
     top: 0;
-    border-bottom: 4px solid #809bce;
     position: sticky;
     z-index: 999;
+}
+
+#index_navbar {
+  background: #809bce;
+}
+
+#circle_navbar {
+  background-color: #95b8d1;
+}
+
+#converter_navbar {
+  background-color: #52b2cf;
+}
+
+#scaler_navbar {
+  background-color: #7ebcab;
 }
 
 .navbar__container{
@@ -207,13 +221,12 @@ ul {
 
 .circle {
     float: left;
-    margin-left: 10vw;
+    margin-left: 15vw;
     margin-right: 5vw;
-    margin-bottom: 5vh;
     color: #fff;
     justify-content: center;
-    border: 40px solid #809bce;
-    background-color: #809bce;
+    border: 40px solid #95b8d1;
+    background-color: #95b8d1;
 }
 
 .inches {
@@ -405,25 +418,39 @@ ul {
   }
   
 .circleMain {
-    color: #809bce;
+    color: #95b8d1;
     font-size: 1.2rem;
     line-height: 150%;
     margin-left: 5vw;
-    margin-right: 5vw;
-    /* float: left; */
+    margin-right: 15vw;
     padding-top: 45px;
 
 }
 
 .circleMain2 {
-  color: #809bce;
+    color: #95b8d1;
     font-size: 1.2rem;
     line-height: 150%;
-    float: left;
     margin-left: 15vw;
     margin-right: 15vw;
     padding-top: 45px;
 
+}
+
+#circle_diagram {
+  float: right;
+  margin-right: 15vw;
+}
+
+.scaler {
+  float: left;
+  margin-left: 15vw;
+  margin-right: 5vw;
+  margin-top: 45px;
+  color: #fff;
+  justify-content: center;
+  border: 40px solid #7ebcab;
+  background-color: #7ebcab;
 }
 
 @media only screen and (max-width: 768px) {
