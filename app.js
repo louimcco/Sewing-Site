@@ -99,26 +99,9 @@ function calcScale() {
 
   else {
   result = measurement * ratio;
-  document.getElementById("scaleOutput").textContent = result +"in";
+  document.getElementById("scaleOutput").textContent = result;
   return false;
   }
-}
-
-
-function calcScaleCm() {
-  let ratio = document.getElementById("ratioCm").value;
-  let measurement = document.getElementById("measurementCm").value;
-  let result;
-
-  if (ratio == "" || measurement == "" ) {
-    document.getElementById("scaleOutput").textContent = "Please fill all fields";
-  return false;
-  }
-  else {
-    result = measurement * ratio;
-  }
-  console.log(result);
-  document.getElementById("scaleOutput").textContent = result +"cm";
 }
 
 let flag = true;

@@ -89,11 +89,26 @@ ul {
   display: flex;
   top: -1000px;
   position: absolute;
-  background-color: #809bce;
   left:0;
   height: 32vh;
   width: 100%;
   transition: 1s;
+}
+
+#index_mobile {
+  background-color: #809bce;
+}
+
+#circle_mobile {
+  background-color: #95b8d1;
+}
+
+#scaler_mobile {
+  background-color: #7ebcab;
+}
+
+#converter_mobile {
+  background-color: #52b2cf;
 }
 
 .open .mobile-menu {
@@ -223,6 +238,7 @@ ul {
     float: left;
     margin-left: 15vw;
     margin-right: 5vw;
+    margin-bottom: 5vh;
     color: #fff;
     justify-content: center;
     border: 40px solid #95b8d1;
@@ -474,5 +490,8 @@ ul {
   }
   #hamburger_icon {
     display: inline;
+  }
+  .circle {
+    margin-left: 10vw;
   }
 }
