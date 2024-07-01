@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js" defer></script> 
+    <script src="./app.js" defer></script>
     <title>Circle Skirt Calculator</title>
 </head>
 <body id="index">
@@ -13,16 +13,16 @@
 <!-- navbar-->
 <nav class="navbar" id="circle_navbar">
     <div class="navbar__container">
-    <a href="./index.html" id="navbar__logo" >Sewing Maths</a> 
+    <a href="./index.html" id="navbar__logo" >Sewing Maths</a>
     <ul class="navbar__menu">
         <li class="navbar__item">
-            <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a> 
+            <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a>
         </li>
         <li class="navbar__item">
-            <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a> 
+            <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a>
         </li>
         <li class="navbar__item">
-        <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a> 
+        <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a>
         </li>
     </ul>
     <div id="hamburger_icon" onclick="toggleMobileMenu(this)">
@@ -33,18 +33,18 @@
           </div>
         <ul class="mobile-menu" id="circle_mobile">
             <li class="navbar__item">
-                <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a> 
+                <a href="./circle.html" class="navbar__links" id="circle-skirt" ><b>Circle Skirt Calculator</b></a>
             </li>
             <li class="navbar__item">
-                <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a> 
+                <a href="./scaler.html" class="navbar__links" id="pattern-scaler" ><b>Pattern Scaler</b></a>
             </li>
             <li class="navbar__item">
-            <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a> 
+            <a href="./converter.html" class="navbar__links" id="conversions"><b>Conversion Calculator</b></a>
             </li>
         </ul>
-    </div>  
     </div>
-</nav>   
+    </div>
+</nav>
 
 
 
@@ -54,7 +54,7 @@
 <br></br>
 
 <div class="row">
-    
+
     <div class="circle" id="circle" >
 
         <label class="toggleSwitch" onchange="swapUnit()">
@@ -67,27 +67,35 @@
             <a></a>
         </label>
 
-<!-- 
-    <button onclick="">Show Inches</button>
-    <button onclick="showCentimeters()">Show Centimeters</button>
-    <br></br> -->
-
         <br></br>
         <h1>Circle skirt Calculator</h1>
         <br></br>
         <h2>Enter your values below:</h2>
         <br><br>
 
-        <span class="inches">
+        <span id="inches">
         <form id="radiusForm" onsubmit="return calcRadius()">
+            <label for="skirt">Skirt Type:</label>
+            <select id="skirt" name="skirt">
+                <option value= "360">Full Circle</option>
+                <option value= "270">Three Quarter Circle</option>
+                <option value= "180">Half Circle</option>
+                <option value= "90">Quarter Circle</option>
+            </select>
+            <br></br>
+
+            <label for="panels">Number of Panels:</label>
+            <input type="number" id="panels" max="8">
+            <br></br>
+
             <label for="waist">Waist Measurement:</label>
             <input type="number" id="waist">
             <br></br>
 
             <label for="length">Length Measurement:</label>
             <input type="number" id="length">
-        
-    
+
+
             <br></br>
 
             <label for="seam">Seam Allowance:</label>
@@ -109,19 +117,31 @@
         </form>
         </span>
 
-        <span class="centimeters">
+        <span id="centimeters">
             <form id="radiusForm" onsubmit="return calcRadiusCm()">
+                <label for="skirtCm">Skirt Type:</label>
+                <select id="skirtCm" name="skirtCm">
+                <option value= "360">Full Circle</option>
+                <option value= "270">Three Quarter Circle</option>
+                <option value= "180">Half Circle</option>
+                <option value= "90">Quarter Circle</option>
+                </select>
+                <br></br>
+
+                <label for="panelsCm">Number of Panels:</label>
+                <input type="number" id="panelsCm" max="8">
+                <br></br>
+
                 <label for="waistCm">Waist Measurement:</label>
                 <input type="number" id="waistCm">
-
                 <br></br>
-        
+
                 <label for="lengthCm">Length Measurement:</label>
                 <input type="number" id="lengthCm">
 
                 </select>
                 <br></br>
-        
+
                 <label for="seamCm">Seam Allowance:</label>
                 <select id="seamCm">
                     <option value="0.25">0.25</option>
@@ -129,7 +149,7 @@
                     <option value="0.75">0.75</option>
                 </select>
                 <br></br>
-        
+
                 <label for="hemCm">Hemline:</label>
                 <select id="hemCm">
                 <option value="0.25">0.25</option>
@@ -144,6 +164,7 @@
         <br></br>
         <h3 id="circleOutput"></h3>
         <h3 id="radius"></h3>
+        <h3 id="angle"></h3>
 
 </div>
 
@@ -153,12 +174,14 @@
     <br></br>
 <p> A full circle skirt is a skirt that, when laid flat, forms a circle. </p>
 <p> This kind of skirt is great for creating lots of movement and volume. Perfect for twirling! </p>
-<p> Entering your measurements into the calculator will produce a "waist radius", 
+<p> Entering your measurements into the calculator will produce a "waist radius",
     as depicted in the diagram, and a "circle radius" which is the waist radius plus the skirt length.
 </p>
 <p> I prefer to construct my piece in quarters, though many people will choose sixths or eigths.
     In this case, alter the central angle of your segement to match. For example, an angle of 60° should be
-    used if the skirt is to be constructed in six pieces. 
+    used if the skirt is to be constructed in six pieces.
+</p>
+<p> The following site offers a great guide as to circle skirts and their variations: <a href="https://anicka.design/2021/12/15/what-is-a-circle-skirt-and-what-are-its-variations/#how-to-calculate-a-full-circle-skirt" target="_blank">anicka.design</a>
 </p>
 
 </div>
@@ -169,12 +192,9 @@
 <div class="row">
 
     <img id="circle_diagram" src="circle_skirt.png" alt="Circle Skirt" width="450" height="400">
-
-        <div class="circleMain2">
-        <p> The following site offers a great guide as to circle skirts and their variations: <a href="https://anicka.design/2021/12/15/what-is-a-circle-skirt-and-what-are-its-variations/#how-to-calculate-a-full-circle-skirt" target="_blank">anicka.design</a></p>
     </div>
 
-    
+
 
 </div>
 

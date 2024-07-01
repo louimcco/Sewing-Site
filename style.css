@@ -453,9 +453,9 @@ ul {
 
 }
 
-#circle_diagram {
-  float: right;
-  margin-right: 15vw;
+#circle_diagram {  
+  float: left;
+  margin-left: 15vw;
 }
 
 .scaler {
@@ -493,5 +493,12 @@ ul {
   }
   .circle {
     margin-left: 10vw;
+  }
+  .circleMain {
+    margin-right: 5vw;
+  }
+  .circleMain2 {
+    margin-right: 5vw;
+    margin-left: 5vw;
   }
 }
