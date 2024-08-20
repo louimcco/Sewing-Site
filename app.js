@@ -127,3 +127,4 @@ function toggleMobileMenu(menu) {
 }
 
 //Convert the decimal to a fraction of an inch (Use Span)
+//Make it so box stays same size
