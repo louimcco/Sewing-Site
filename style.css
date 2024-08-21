@@ -531,7 +531,7 @@ ul {
     display: inline;
   }
   .container {
-    grid-template-columns: 1fr 450px 1fr;
+    grid-template-columns: 1fr 350px 1fr;
   }
   .circle {
     grid-column-start: 2;
