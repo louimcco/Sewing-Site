@@ -14,18 +14,31 @@
     if (waist == "" || length == "" || panels == "") {
       document.getElementById("circleOutput").textContent = "Please fill all fields";
       document.getElementById("radius").textContent = "";
+      document.getElementById("angle").textContent = "";
     return false;
     } else {
     
     // Calculate radius
     wradius = ((waist / 3.1415962) / 2) + (2 * parseFloat(seam));
+    
+    if (skirt == "270") {
+      wradius = wradius * 1.5;
+    }
+
+    if (skirt == "180") {
+      wradius = wradius * 2;
+    }
+
+    if (skirt == "90") {
+      wradius = wradius * 4;
+    }
+
     radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
     radius = radius.toFixed(2);
     wradius = wradius.toFixed(2);
 
     //Calculate angle
-    angle = (skirt/panels);
-
+    angle = (skirt/panels).toFixed(2);
     console.log(radius);
     document.getElementById("circleOutput").textContent = "Waist Radius: " + wradius + "\"";
     document.getElementById("radius").textContent = "Circle of Radius: " + radius + "\"";
@@ -49,18 +62,32 @@ function calcRadiusCm() {
     if (waist == "" || length == "" || panels == "") {
       document.getElementById("circleOutput").textContent = "Please fill all fields";
       document.getElementById("radius").textContent = "";
+      document.getElementById("angle").textContent = "";
     return false;
     }
 
     else {
     // Calculate radius
     wradius = ((waist / 3.1415962) / 2) + (2 * parseFloat(seam))
+
+    if (skirt == "270") {
+      wradius = wradius * 1.5;
+    }
+
+    if (skirt == "180") {
+      wradius = wradius * 2;
+    }
+
+    if (skirt == "90") {
+      wradius = wradius * 4;
+    }
+
     radius = wradius + parseFloat(seam) + parseFloat(hemline) + parseInt(length);
     wradius = wradius.toFixed(2);
     radius = radius.toFixed(2);
 
     //Calculate angle
-    angle = (skirt/panels);
+    angle = (skirt/panels).toFixed(2);
 
     console.log(radius);
     document.getElementById("radius").textContent = "Circle of Radius: " + radius + "cm";

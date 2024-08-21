@@ -254,8 +254,6 @@ ul {
 .container{
   display: grid;
   grid-template-columns: 1fr 500px 600px 1fr;
-  grid-template-rows: 600px 1fr;
-  overflow-y: auto;
 }
 
 .circle {
@@ -266,8 +264,9 @@ ul {
     justify-content: center;
     border: 40px solid #95b8d1;
     background-color: #95b8d1;
+    height: 600px;
     position: sticky;
-    top: 0px;
+    top: 155px;
 }
 
 /* toggle */
@@ -441,8 +440,6 @@ ul {
     display: none;
 }
 
-
-
 .circleMain {
     color: #3d3d3d ;
     font-size: 1.1rem;
@@ -478,19 +475,38 @@ ul {
   background-color: #7ebcab;
 }
 
+
 @media only screen and (max-width: 1170px) {
   .container{
-    grid-template-columns: 1fr 600px 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 500px 300px 1fr;
+  }
+  .circleMain {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .circle {
+    grid-column-start: 2;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .container{
+    grid-template-columns: 1fr 50px 500px 50px 1fr;
+    grid-template-rows: auto auto;
   }
   .circleMain {
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
   }
   .circle {
-    display: none;
+    position: relative;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    top: 0;
   }
 }
+
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -515,16 +531,16 @@ ul {
     display: inline;
   }
   .container {
-    grid-template-columns: 1fr 80vw 1fr;
+    grid-template-columns: 1fr 450px 1fr;
   }
   .circle {
-    margin-left: 10vw;
+    grid-column-start: 2;
+    position: relative;
+    margin-right: 0;
+    top: 0;
   }
   .circleMain {
-    margin-right: 5vw;
-  }
-  .circleMain2 {
-    margin-right: 5vw;
-    margin-left: 5vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
   }
 }
