@@ -110,7 +110,7 @@ function calcScale() {
   }
 
   else {
-  result = measurement * ratio;
+  result = (measurement * ratio).toFixed(2);
   document.getElementById("scaleOutput").textContent = result;
   return false;
   }

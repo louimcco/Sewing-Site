@@ -449,6 +449,7 @@ ul {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-bottom: 5vh;
 
 }
 
@@ -465,14 +466,28 @@ ul {
 
 
 .scaler {
-  float: left;
-  margin-left: 15vw;
+  align-self: start;
+  grid-column-start: 2;
   margin-right: 5vw;
-  margin-top: 45px;
+  margin-top: 75px;
   color: #fff;
   justify-content: center;
   border: 40px solid #7ebcab;
   background-color: #7ebcab;
+  position: sticky;
+  top: 155px;
+}
+
+.scalerMain {
+  color: #3d3d3d ;
+    font-size: 1.1rem;
+    line-height: 150%;
+    padding-top: 110px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-bottom: 5vh;
 }
 
 
